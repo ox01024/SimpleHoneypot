@@ -1,0 +1,196 @@
+{
+    "version": "0.36",
+    "network": "40.76.34.109/24",
+    "network_build": "localhost",
+    "storage": "sqlite3:log.db",
+    "hosts": [
+        {
+            "ip": "0.0.0.0",
+            "handlers": [
+                {
+                    "handler": "dcerpc",
+                    "port": 135,
+                    "params": {
+                        "accounts": [
+                            "administrator:123456"
+                        ],
+                        "domain_name": "DESKTOP-Ph65"
+                    }
+                },
+                {
+                    "handler": "eip",
+                    "port": 44818,
+                    "params": {
+                        "ip": "192.168.1.11",
+                        "product_name": "1766-L32BXBA C/21.02"
+                    }
+                },
+                {
+                    "handler": "elasticsearch",
+                    "port": 9200
+                },
+                {
+                    "handler": "ftp",
+                    "port": 21,
+                    "params": {
+                        "accounts": [
+                            "ftp:123456"
+                        ],
+                        "welcome_message": "Welcome to the FTP Server"
+                    }
+                },
+                {
+                    "handler": "http",
+                    "port": 80,
+                    "params": {
+                        "fs_path": "apachefs",
+                        "server_version": "Apache",
+                        "ssl": false
+                    }
+                },
+                {
+                    "handler": "iec104",
+                    "port": 2404
+                },
+                {
+                    "handler": "memcache",
+                    "port": 11211,
+                    "params": {
+                        "server_version": "1.5.16"
+                    }
+                },
+                {
+                    "handler": "modbus",
+                    "port": 502,
+                    "params": {
+                        "server_info": [
+                            "Schneider Electric",
+                            "ATV630D22N4",
+                            "0204",
+                            "Device Info test"
+                        ]
+                    }
+                },
+                {
+                    "handler": "mqtt",
+                    "port": 1883,
+                    "params": {
+                        "accounts": null,
+                        "ssl": false
+                    }
+                },
+                {
+                    "handler": "mysql",
+                    "port": 3306,
+                    "params": {
+                        "accounts": [
+                            "root:123456"
+                        ],
+                        "server_version": "5.7.9",
+                        "system_variables": [
+                            "datadir:/usr/local/var/mysql/"
+                        ]
+                    }
+                },
+                {
+                    "handler": "rdp",
+                    "port": 3389,
+                    "params": {
+                        "accounts": [
+                            "administrator:123456"
+                        ],
+                        "auth": false,
+                        "domain_name": "DESKTOP-Q1Test",
+                        "image": "rdp.jpg",
+                        "sec_layer": "auto"
+                    }
+                },
+                {
+                    "handler": "redis",
+                    "port": 6379,
+                    "params": {
+                        "server_version": "3.2.3"
+                    }
+                },
+                {
+                    "handler": "s7",
+                    "port": 102
+                },
+                {
+                    "handler": "smb",
+                    "port": 445,
+                    "params": {
+                        "accounts": [
+                            "administrator:123456"
+                        ],
+                        "domain_name": "NASE83ACA",
+                        "server_name": "NASE83ACA",
+                        "shares": [
+                            "admin:Home directory",
+                            "public:Public directory"
+                        ]
+                    }
+                },
+                {
+                    "handler": "smtp",
+                    "port": 25,
+                    "params": {
+                        "accounts": [
+                            "admin:123456"
+                        ],
+                        "appname": "ESMTP",
+                        "auth": false,
+                        "banner": "Postfix (Ubuntu)",
+                        "hostname": "smtp.nss.com",
+                        "ssl": false,
+                        "timeout": 3
+                    }
+                },
+                {
+                    "handler": "snmp",
+                    "port": 161,
+                    "params": {
+                        "accounts": [
+                            "admin:123456"
+                        ],
+                        "engineId": "snmp_Server",
+                        "enterpriseId": 20408
+                    }
+                },
+                {
+                    "handler": "tcp_echo",
+                    "port": 1234
+                },
+                {
+                    "handler": "tcp_forward",
+                    "port": 8079,
+                    "params": {
+                        "target": "www.bing.com:80"
+                    }
+                },
+                {
+                    "handler": "telnet",
+                    "port": 23,
+                    "params": {
+                        "password": "123456",
+                        "prompt": "$ ",
+                        "ssl": false
+                    }
+                },
+                {
+                    "handler": "udp_echo",
+                    "port": 1234
+                },
+                {
+                    "handler": "vnc",
+                    "port": 5900,
+                    "params": {
+                        "challenge": "0123456789abcdef",
+                        "password": "123456"
+                    }
+                }
+            ]
+        }
+    ],
+    "templates": null
+}
